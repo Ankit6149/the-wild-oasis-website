@@ -1,6 +1,7 @@
 import Header from "@/app/_components/Header";
 
 import { Josefin_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import "@/app/_styles/globals.css";
 import { ReservationProvider } from "./_components/ReservationContext";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
             <ReservationProvider>{children}</ReservationProvider>
           </main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
